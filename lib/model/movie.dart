@@ -118,34 +118,39 @@ var movieList = [
       rating: 7.7),
   Movie(
       id: 7,
-      name: "Deadpool & Wolverine",
-      poster: "img/poster6.jpeg",
+      name: "Guardians of the Galaxy",
+      poster: "img/poster7.jpg",
       category: [
         "Action",
+        "Science-fiction",
         "Comedy",
         "Superhero",
-        "Science-fiction",
-        "Adventure"
+        "Adventure",
+        "Fantasy",
       ],
-      duration: "2h 7m",
+      duration: "2h 2m",
       description:
-          "Deadpool's peaceful existence comes crashing down when the Time Variance Authority recruits him to help safeguard the multiverse. He soon unites with his would-be pal, Wolverine, to complete the mission and save his world from an existential threat.",
-      rating: 7.7),
+          "A bunch of skilled criminals led by brash adventurer Peter Quill join hands to fight a villain named Ronan the Accuser who wants to control the universe with the help of a mystical orb.",
+      rating: 8.0),
   Movie(
       id: 8,
-      name: "Deadpool & Wolverine",
-      poster: "img/poster6.jpeg",
+      name: "The Suicide Squad",
+      poster: "img/poster8.png",
       category: [
         "Action",
         "Comedy",
         "Superhero",
+        "Adventure",
         "Science-fiction",
-        "Adventure"
+        "Fantasy",
+        "Crime Fiction",
+        "Thriller",
+        "Drama",
       ],
-      duration: "2h 7m",
+      duration: "2h 12m",
       description:
-          "Deadpool's peaceful existence comes crashing down when the Time Variance Authority recruits him to help safeguard the multiverse. He soon unites with his would-be pal, Wolverine, to complete the mission and save his world from an existential threat.",
-      rating: 7.7),
+          "A government agent manipulates supervillains to become a part of a dangerous team in exchange for reduced sentences. They get sent to Corto Maltese, where they must destroy a laboratory.",
+      rating: 7.2),
   Movie(
       id: 9,
       name: "Deadpool & Wolverine",
@@ -154,8 +159,12 @@ var movieList = [
         "Action",
         "Comedy",
         "Superhero",
+        "Adventure",
         "Science-fiction",
-        "Adventure"
+        "Fantasy",
+        "Crime Fiction",
+        "Thriller",
+        "Drama",
       ],
       duration: "2h 7m",
       description:

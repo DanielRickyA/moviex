@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:moviex/category-list.dart';
+import 'package:moviex/home-screen/category-list.dart';
+import 'package:moviex/detail-movie.dart';
 import 'package:moviex/model/movie.dart';
-import 'package:moviex/search-movie.dart';
+import 'package:moviex/home-screen/search-movie.dart';
 
 void main() {
   runApp(const MainApp());
@@ -70,32 +71,42 @@ class MainApp extends StatelessWidget {
                           .map((Movie movie) {
                         return Padding(
                           padding: const EdgeInsets.only(right: 8.0),
-                          child: Container(
-                            constraints: const BoxConstraints(maxWidth: 150),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(10),
-                                  child: Image.asset(
-                                    movie.poster,
-                                    width: 150,
-                                    height: 200,
-                                    fit: BoxFit.fill,
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) =>
+                                        DetailMovie(movie: movie),
+                                  ));
+                            },
+                            child: Container(
+                              constraints: const BoxConstraints(maxWidth: 150),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(10),
+                                    child: Image.asset(
+                                      movie.poster,
+                                      width: 150,
+                                      height: 200,
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
-                                ),
-                                const SizedBox(
-                                  height: 6.0,
-                                ),
-                                Text(
-                                  movie.name,
-                                  style: const TextStyle(
-                                    fontSize: 16,
-                                    color: Colors.white,
+                                  const SizedBox(
+                                    height: 6.0,
                                   ),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ],
+                                  Text(
+                                    movie.name,
+                                    style: const TextStyle(
+                                      fontSize: 16,
+                                      color: Colors.white,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         );
