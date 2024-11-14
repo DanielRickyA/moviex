@@ -5,9 +5,9 @@ class SearchMovie extends StatelessWidget {
 
   @override
   Widget build(Object context) {
-    // TODO: implement build
     return const TextField(
       style: TextStyle(color: Colors.white),
+      cursorColor: Colors.orange,
       decoration: InputDecoration(
         prefixIcon: Icon(Icons.search),
         focusColor: Colors.white,
