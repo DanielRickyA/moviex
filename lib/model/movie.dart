@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 class Movie {
   int id;
   String name;
@@ -87,7 +85,7 @@ var movieList = [
       rating: 8.4),
   Movie(
       id: 5,
-      name: "Joker",
+      name: "Joker (2019)",
       poster: "img/poster5.jpg",
       category: [
         "Horror",
