@@ -1,33 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:moviex/component/text-title.dart';
-import 'package:moviex/model/movie.dart';
 import 'package:moviex/detail_movie.dart';
+import 'package:moviex/model/movie.dart';
 
-class PopularMovie extends StatelessWidget {
-  const PopularMovie({super.key});
+class ContinueWatching extends StatelessWidget {
+  const ContinueWatching({super.key});
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constrains) {
       if (constrains.maxWidth > 800) {
-        return const PopularMovieDestop();
+        return const ContinueWatchingDestop();
       } else {
-        return const PopularMovieMobile();
+        return const ContinueWatchingMobile();
       }
     });
   }
 }
 
-class PopularMovieMobile extends StatelessWidget {
-  const PopularMovieMobile({super.key});
+class ContinueWatchingMobile extends StatelessWidget {
+  const ContinueWatchingMobile({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const TextTitle(title: "Populer Movie"),
+        const TextTitle(title: "Continue Watching"),
         const SizedBox(
           height: 8.0,
         ),
@@ -37,7 +37,7 @@ class PopularMovieMobile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: movieList
-                .where((movie) => movie.id >= 1 && movie.id <= 6)
+                .where((movie) => movie.id >= 7 && movie.id <= 12)
                 .map((Movie movie) {
               return Padding(
                 padding: const EdgeInsets.only(right: 8.0),
@@ -88,15 +88,15 @@ class PopularMovieMobile extends StatelessWidget {
   }
 }
 
-class PopularMovieDestop extends StatelessWidget {
-  const PopularMovieDestop({super.key});
+class ContinueWatchingDestop extends StatelessWidget {
+  const ContinueWatchingDestop({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const TextTitle(title: "Populer Movie"),
+        const TextTitle(title: "Continue Watching"),
         const SizedBox(
           height: 8.0,
         ),
@@ -106,7 +106,7 @@ class PopularMovieDestop extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: movieList
-                .where((movie) => movie.id >= 1 && movie.id <= 6)
+                .where((movie) => movie.id >= 7 && movie.id <= 12)
                 .map((Movie movie) {
               return Padding(
                 padding: const EdgeInsets.only(right: 8.0),

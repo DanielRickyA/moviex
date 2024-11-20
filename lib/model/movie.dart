@@ -101,8 +101,23 @@ var movieList = [
       rating: 7.7),
   Movie(
       id: 6,
+      name: "The Death of Superman",
+      poster: "img/poster6.jpg",
+      category: [
+        "Action",
+        "Comedy",
+        "Superhero",
+        "Science-fiction",
+        "Adventure"
+      ],
+      duration: "1h 21m",
+      description:
+          "Doomsday, a monstrous humanoid, emerges from a meteorite and runs wild in the city. However, Superman, along with the Justice League decide to put down the monster for good.",
+      rating: 7.3),
+  Movie(
+      id: 7,
       name: "Deadpool & Wolverine",
-      poster: "img/poster6.jpeg",
+      poster: "img/poster7.jpeg",
       category: [
         "Action",
         "Comedy",
@@ -115,9 +130,9 @@ var movieList = [
           "Deadpool's peaceful existence comes crashing down when the Time Variance Authority recruits him to help safeguard the multiverse. He soon unites with his would-be pal, Wolverine, to complete the mission and save his world from an existential threat.",
       rating: 7.7),
   Movie(
-      id: 7,
+      id: 8,
       name: "Guardians of the Galaxy",
-      poster: "img/poster7.jpg",
+      poster: "img/poster8.jpg",
       category: [
         "Action",
         "Science-fiction",
@@ -131,9 +146,9 @@ var movieList = [
           "A bunch of skilled criminals led by brash adventurer Peter Quill join hands to fight a villain named Ronan the Accuser who wants to control the universe with the help of a mystical orb.",
       rating: 8.0),
   Movie(
-      id: 8,
+      id: 9,
       name: "The Suicide Squad",
-      poster: "img/poster8.png",
+      poster: "img/poster9.png",
       category: [
         "Action",
         "Comedy",
@@ -150,37 +165,57 @@ var movieList = [
           "A government agent manipulates supervillains to become a part of a dangerous team in exchange for reduced sentences. They get sent to Corto Maltese, where they must destroy a laboratory.",
       rating: 7.2),
   Movie(
-      id: 9,
-      name: "Deadpool & Wolverine",
-      poster: "img/poster6.jpeg",
+      id: 10,
+      name: "The Amazing Spider-Man",
+      poster: "img/poster10.jpg",
       category: [
         "Action",
-        "Comedy",
+        "Romance",
         "Superhero",
-        "Adventure",
         "Science-fiction",
+        "Adventure",
         "Fantasy",
-        "Crime Fiction",
+        "Action/Adventure",
+        "Drama",
         "Thriller",
+      ],
+      duration: "2h 16m",
+      description:
+          "Peter Parker, an outcast high school student, gets bitten by a radioactive spider and attains superpowers. While unraveling his parents' disappearance, he must fight against the Lizard.",
+      rating: 6.9),
+  Movie(
+      id: 11,
+      name: "Zack Snyder's Justice League",
+      poster: "img/poster11.jpg",
+      category: [
+        "Action",
+        "Superhero",
+        "Science-fiction",
+        "Adventure",
+        "Fantasy",
         "Drama",
       ],
-      duration: "2h 7m",
+      duration: "4h 2m",
       description:
-          "Deadpool's peaceful existence comes crashing down when the Time Variance Authority recruits him to help safeguard the multiverse. He soon unites with his would-be pal, Wolverine, to complete the mission and save his world from an existential threat.",
-      rating: 7.7),
+          "Bruce Wayne and Diana Prince try to bring the metahumans of Earth together after the death of Clark Kent. Meanwhile, Darkseid sends Steppenwolf to Earth with a vast army to subjugate humans.",
+      rating: 7.9),
   Movie(
-      id: 10,
-      name: "Deadpool & Wolverine",
-      poster: "img/poster6.jpeg",
+      id: 12,
+      name: "The Batman",
+      poster: "img/poster12.jpg",
       category: [
         "Action",
-        "Comedy",
         "Superhero",
         "Science-fiction",
-        "Adventure"
+        "Crime film",
+        "Adventure",
+        "Mystery",
+        "Drama",
+        "Thriller",
+        "Crime Fiction",
       ],
-      duration: "2h 7m",
+      duration: "2h 56m",
       description:
-          "Deadpool's peaceful existence comes crashing down when the Time Variance Authority recruits him to help safeguard the multiverse. He soon unites with his would-be pal, Wolverine, to complete the mission and save his world from an existential threat.",
-      rating: 7.7),
+          "Batman is called to intervene when the mayor of Gotham City is murdered. Soon, his investigation leads him to uncover a web of corruption, linked to his own dark past.",
+      rating: 7.8),
 ];
