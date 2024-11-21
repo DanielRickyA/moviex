@@ -8,6 +8,28 @@ class DetailMovie extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return LayoutBuilder(
+        builder: (BuildContext context, BoxConstraints constrains) {
+      if (constrains.maxWidth > 800) {
+        return DetailMovieDestop(
+          movie: movie,
+        );
+      } else {
+        return DetailMovieMobile(
+          movie: movie,
+        );
+      }
+    });
+  }
+}
+
+class DetailMovieMobile extends StatelessWidget {
+  final Movie movie;
+
+  const DetailMovieMobile({super.key, required this.movie});
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -53,7 +75,8 @@ class DetailMovie extends StatelessWidget {
               ],
             ),
             Container(
-              padding: const EdgeInsets.only(top: 16, right: 8, left: 8),
+              padding:
+                  const EdgeInsets.only(top: 18.0, right: 16.0, left: 16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
@@ -111,6 +134,131 @@ class DetailMovie extends StatelessWidget {
                 ],
               ),
             ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DetailMovieDestop extends StatelessWidget {
+  final Movie movie;
+
+  const DetailMovieDestop({super.key, required this.movie});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Stack(
+                    children: [
+                      Image.asset(
+                        movie.poster,
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                      ),
+                      Positioned(
+                        top: 10,
+                        left: 10,
+                        child: CircleAvatar(
+                          backgroundColor: Colors.grey,
+                          child: IconButton(
+                            icon: const Icon(
+                              Icons.arrow_back,
+                              color: Colors.white,
+                            ),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 8.0, top: 16.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              movie.name,
+                              style: const TextStyle(
+                                  fontSize: 28,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w500),
+                              textAlign: TextAlign.start,
+                            ),
+                            const SaveMovieButton(),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Duration: ${movie.duration} • ⭐ ${movie.rating}/10 from IMDb",
+                              style: const TextStyle(
+                                  fontSize: 18, color: Colors.white),
+                              textAlign: TextAlign.start,
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: movie.category.map((item) {
+                              return Padding(
+                                padding: const EdgeInsets.only(right: 8.0),
+                                child: OutlinedButton(
+                                  onPressed: () {},
+                                  child: Text(
+                                    item,
+                                    style: const TextStyle(color: Colors.white),
+                                  ),
+                                ),
+                              );
+                            }).toList(),
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 8,
+                        ),
+                        const Text(
+                          "Synopsis: ",
+                          style: TextStyle(fontSize: 24, color: Colors.white),
+                          textAlign: TextAlign.start,
+                        ),
+                        ExpandableText(synopsis: movie.description),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            )
           ],
         ),
       ),

@@ -3,7 +3,6 @@ import 'package:moviex/home-screen/category_list.dart';
 import 'package:moviex/home-screen/continue-watching.dart';
 import 'package:moviex/home-screen/header.dart';
 import 'package:moviex/home-screen/popular_movie.dart';
-import 'package:moviex/model/movie.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key});
